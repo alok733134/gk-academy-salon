@@ -99,20 +99,10 @@ function AboutPage() {
             <p className="font-script text-2xl text-accent">Founder & Lead Artist</p>
             <div className="mt-6 space-y-4 text-muted-foreground">
               <p>
-                Gurpreet started her journey with a love for making people feel beautiful and a
-                belief that great craft can change a life. After years of training in makeup, hair
-                and nail artistry, she opened GK Studio in Ludhiana's Model Town and never looked
-                back.
+                At GK Makeovers & Salon, beauty is not just a service — it's a personalized experience. With a passion for enhancing natural beauty and an eye for detail, our founder has built a space where style meets confidence. Every client is treated with care, creativity, and a commitment to delivering results that make you feel your absolute best.
               </p>
               <p>
-                Today, she splits her time between bridal clients, weekend masterclasses and
-                mentoring students who are building their own beauty businesses across Punjab.
-              </p>
-              <p>
-                Her philosophy is simple:{" "}
-                <span className="font-medium text-foreground">
-                  be kind, be clean, be excellent.
-                </span>
+                Built on passion and perfected with skill, GK Makeovers & Salon is more than just a salon — it's a place where beauty transforms into confidence. Our founder believes every client deserves to feel powerful, radiant, and unapologetically themselves.
               </p>
             </div>
           </div>
