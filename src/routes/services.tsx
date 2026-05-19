@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CtaBanner } from "@/components/CtaBanner";
-import { services } from "@/data/site";
+import { services, combos } from "@/data/site";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Salon Services — GK Academy" },
       {
         property: "og:description",
-        content: "Bridal makeup, hair, nails, lashes, skin — the full menu with real pricing lists.",
+        content: "Bridal makeup, hair, nails, lashes, skin — the full menu with real pricing lists and combo packages.",
       },
       { property: "og:url", content: "/services" },
     ],
@@ -73,14 +74,18 @@ function ServicesPage() {
                 </div>
 
                 {s.menu && s.menu.length > 0 && (
-                  <div className="rounded-3xl border border-border/50 bg-card/60 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+                  <div className="rounded-3xl border border-border/50 bg-card/40 p-6 shadow-sm backdrop-blur-sm sm:p-8">
                     <h3 className="font-display text-2xl text-accent border-b border-border/40 pb-4 mb-6">
-                      Rate List
+                      Rate List & Styling Menu
                     </h3>
-                    <div className="space-y-8">
+                    <div className="grid gap-6">
                       {s.menu.map((menuCat) => (
-                        <div key={menuCat.categoryName} className="space-y-4">
-                          <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/80">
+                        <div
+                          key={menuCat.categoryName}
+                          className="rounded-2xl border border-border/30 bg-background/50 p-5 space-y-4 shadow-sm hover:shadow-md transition duration-300"
+                        >
+                          <h4 className="text-xs font-bold uppercase tracking-wider text-accent border-b border-border/20 pb-2 flex items-center gap-1.5">
+                            <Sparkles className="h-3 w-3 text-accent animate-pulse shrink-0" />
                             {menuCat.categoryName}
                           </h4>
                           <div className="space-y-3.5">
@@ -96,7 +101,7 @@ function ServicesPage() {
                                     </span>
                                   )}
                                 </div>
-                                <div className="mx-2 flex-1 border-b border-dashed border-border/60" />
+                                <div className="mx-2 flex-1 border-b border-dashed border-border/40" />
                                 <div className="flex items-baseline gap-1.5">
                                   {menuItem.regularPrice && (
                                     <span className="text-xs text-muted-foreground line-through">
@@ -118,6 +123,59 @@ function ServicesPage() {
               </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Special Combos Section */}
+      <section className="px-6 py-24 lg:px-10 bg-cream/30 mt-24 border-t border-border/40">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            eyebrow="Exclusive Offers"
+            title="Special Salon Combos"
+            description="Treat yourself to our multi‑service luxury packages at specialized rates. Indulge in premium care at Model Town, Ludhiana."
+          />
+
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {combos.map((combo, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
+                className="relative flex flex-col justify-between overflow-hidden rounded-3xl border border-accent/25 bg-card p-6 shadow-md transition duration-300 hover:shadow-xl hover:border-accent"
+              >
+                <div>
+                  <div className="flex items-start justify-between">
+                    <span className="rounded-full bg-accent/10 px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-accent">
+                      {combo.badge}
+                    </span>
+                    <span className="text-2xl font-bold text-accent font-display">{combo.price}</span>
+                  </div>
+
+                  <div className="mt-6 border-t border-border/40 pt-4">
+                    <ul className="space-y-3">
+                      {combo.items.map((item, itemIdx) => (
+                        <li key={itemIdx} className="flex items-start gap-2 text-xs text-foreground/90 font-medium leading-relaxed">
+                          <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <Link
+                    to="/contact"
+                    className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-primary py-2.5 text-xs font-semibold text-primary-foreground transition hover:bg-accent"
+                  >
+                    <Sparkles className="h-3.5 w-3.5 shrink-0" /> Book Package
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

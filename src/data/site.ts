@@ -65,44 +65,58 @@ export const services: ServiceCategory[] = [
     slug: "hair",
     title: "Hair",
     image: hair,
-    blurb: "Treat your hair with premium styling, smoothening, keratin, botox and specialized treatments.",
+    blurb: "Treat your hair with premium styling, cuts, smoothening, keratin, botox and specialized treatments.",
     items: [
+      "Hair Cut & Blow Dry",
       "Smoothing & Rebonding",
       "Keratin & Hair Botox",
       "Kerasmooth & Nanoplastia",
-      "Highlights & Balayage",
       "Deep Conditioning & Spa",
     ],
     menu: [
       {
-        categoryName: "Because Your Hair Deserves The Best",
+        categoryName: "Cut & Finish",
+        items: [
+          { name: "Cutting (without wash)", price: "₹200" },
+          { name: "Cutting (with wash)", price: "₹250" },
+          { name: "Head Wash + Blow Dry", price: "₹200" },
+          { name: "Pressing", price: "₹350" },
+          { name: "Pressing (with wash)", price: "₹450" },
+          { name: "Curls", price: "₹400" },
+          { name: "Curls (with wash)", price: "₹500" },
+          { name: "Head Wash with Dryer", price: "₹150" },
+        ],
+      },
+      {
+        categoryName: "Hair Spa Services (Free Haircut Included)",
+        items: [
+          { name: "Matrix or Loreal Spa + Free Haircut", price: "₹700", badge: "Offer" },
+          { name: "Honey Moisture Spa + Free Haircut", price: "₹700" },
+          { name: "Keratin Spa + Free Haircut", price: "₹700", badge: "Best Value" },
+        ],
+      },
+      {
+        categoryName: "Smoothing, Rebonding & Treatments",
         items: [
           { name: "Smoothing (Mid length)", price: "₹2,499" },
           { name: "Rebonding", price: "₹3,499" },
-          { name: "Hair Spa", price: "₹499" },
-          { name: "Deep Conditioning", price: "₹799" },
           { name: "Kerasmooth", price: "₹4,499" },
+          { name: "Keratin Treatment", price: "₹2,500", regularPrice: "₹1,799", badge: "Updated" },
+          { name: "Hair Botox", price: "₹3,499" },
+          { name: "Nanoplastia", price: "₹4,499" },
+          { name: "Silk Therapy", price: "₹3,999" },
         ],
       },
       {
-        categoryName: "Signature Services & Styling",
+        categoryName: "Highlights, Balayage & Styling",
         items: [
-          { name: "Keratin Treatment", price: "₹2,500", regularPrice: "₹1,799", badge: "New Rate" },
-          { name: "Hair Botox", price: "₹3,499" },
           { name: "Root-touch up", price: "₹499" },
           { name: "Highlights + Spa", price: "₹2,499" },
           { name: "Global (hair base) + Spa (Shoulder length)", price: "₹1,999" },
-        ],
-      },
-      {
-        categoryName: "Luxury Experience & Style Bar",
-        items: [
           { name: "Global (fashion shade) + Spa", price: "₹2,499" },
-          { name: "Nanoplastia", price: "₹4,499" },
-          { name: "Silk Therapy", price: "₹3,999" },
           { name: "Ombre hair color + Spa", price: "₹4,599" },
-          { name: "Head massage + Oiling", price: "₹499" },
           { name: "Balayage highlights + Spa", price: "₹4,000", badge: "Trending" },
+          { name: "Head massage + Oiling", price: "₹499" },
           { name: "Dandruff Treatment", price: "₹799" },
           { name: "Hairfall Treatment", price: "₹799" },
         ],
@@ -113,18 +127,86 @@ export const services: ServiceCategory[] = [
     slug: "nails",
     title: "Nails",
     image: nails,
-    blurb: "Gel, acrylic, extensions and signature 3D nail art.",
-    items: ["Gel Polish", "Acrylic Extensions", "3D Nail Art", "French / Chrome", "Nail Repair"],
+    blurb: "Premium gel, acrylic extensions, overlays and manicure/pedicure services in Model Town.",
+    items: [
+      "Acrylic & Gel Extensions",
+      "Power Polish (Shellac)",
+      "Nail Overlay & Refills",
+      "Manicure & Pedicure",
+      "Acrylic & Extension Removal",
+    ],
     menu: [
       {
-        categoryName: "Premium Nail Services",
+        categoryName: "Nail Salon Price List",
         items: [
-          { name: "Gel Polish Application", price: "₹499", badge: "Popular" },
-          { name: "Acrylic Extensions (Set)", price: "₹1,499" },
-          { name: "Gel Extensions (Set)", price: "₹1,499" },
-          { name: "Signature 3D Nail Art", price: "₹199 / nail" },
-          { name: "French / Chrome Polish Overlay", price: "₹699" },
-          { name: "Nail Repair & Extension Removal", price: "₹299" },
+          { name: "Power Polish {Shellac}", price: "₹500" },
+          { name: "Temporary Nail Extensions", price: "₹700" },
+          { name: "Gel Nail Extensions", price: "₹1,000", badge: "Popular" },
+          { name: "Acrylic Nails Extension", price: "₹1,500" },
+          { name: "Overlay", price: "₹500" },
+          { name: "Toe Extensions", price: "₹500" },
+          { name: "Acrylic Removal", price: "₹600" },
+          { name: "Refilling", price: "₹900" },
+          { name: "Temporary Removal", price: "₹200" },
+        ],
+      },
+      {
+        categoryName: "Manicure & Pedicure",
+        items: [
+          { name: "Normal Manicure", price: "₹500" },
+          { name: "Normal Pedicure", price: "₹500" },
+          { name: "Crystal Manicure", price: "₹1,000", badge: "Luxury" },
+          { name: "Crystal Pedicure", price: "₹1,000", badge: "Luxury" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "skin",
+    title: "Skin",
+    image: skin,
+    blurb: "Experience absolute skin transformation with our curated organic and professional facials.",
+    items: [
+      "O3+ Bridal & Glow Facials",
+      "Organic & Astaberry Facials",
+      "FYC Korean Glow & Hydra Boost",
+      "Honey & Rica Body Waxing",
+      "Threading & Upper Lips",
+    ],
+    menu: [
+      {
+        categoryName: "Facials & Skin Treatments",
+        items: [
+          { name: "Astaberry Facial (Wine/Plum/Papaya/Brightening)", price: "₹500" },
+          { name: "Organic Facial (Plum/Brightening)", price: "₹700" },
+          { name: "VLCC Facial (Tan/Papaya)", price: "₹500" },
+          { name: "Arome Magic (Vitamin C)", price: "₹600" },
+          { name: "FYC (Korean Glow/Hydra Boost/Vitamin C)", price: "₹900", badge: "Highly Recommended" },
+          { name: "Organic Glow (Red Wine/Sparkling Diamond)", price: "₹600" },
+          { name: "Mama Earth (Rice Water/Ubtan)", price: "₹600" },
+          { name: "Oxyglow Facial", price: "₹500" },
+          { name: "O3+ Bridal Facial", price: "₹1,500", badge: "Bridal Special" },
+          { name: "O3+ Shine & Glow Facial", price: "₹2,000", badge: "Premium" },
+        ],
+      },
+      {
+        categoryName: "Honey Waxing",
+        items: [
+          { name: "Full Arms (Honey)", price: "₹200" },
+          { name: "Full Legs (Honey)", price: "₹300" },
+          { name: "Half Arms (Honey)", price: "₹150" },
+          { name: "Half Legs (Honey)", price: "₹150" },
+          { name: "Full Body Wax (Honey, without V-Wax)", price: "₹1,500", badge: "Package" },
+        ],
+      },
+      {
+        categoryName: "Rica Waxing",
+        items: [
+          { name: "Full Arms (Rica)", price: "₹500" },
+          { name: "Full Legs (Rica)", price: "₹500" },
+          { name: "Half Arms (Rica)", price: "₹250" },
+          { name: "Half Legs (Rica)", price: "₹250" },
+          { name: "Full Body Wax (Rica, without V-Wax)", price: "₹2,000", badge: "Package" },
         ],
       },
     ],
@@ -148,23 +230,105 @@ export const services: ServiceCategory[] = [
       },
     ],
   },
+];
+
+export type ComboPackage = {
+  price: string;
+  badge?: string;
+  items: string[];
+};
+
+export const combos: ComboPackage[] = [
   {
-    slug: "skin",
-    title: "Skin",
-    image: skin,
-    blurb: "Facials, clean‑ups and advanced skin therapies.",
-    items: ["Signature Facial", "Clean‑Up", "Hydra Glow", "Pigmentation Care", "Bridal Skin Prep"],
-    menu: [
-      {
-        categoryName: "Skin Care & Face Treatments",
-        items: [
-          { name: "Hydra Glow Facial", price: "₹1,999", badge: "Highly Rated" },
-          { name: "Deep Clean-Up", price: "₹599" },
-          { name: "Signature Glow Facial", price: "₹1,199" },
-          { name: "Anti-Pigmentation Therapy", price: "₹1,499" },
-          { name: "Bridal Skin Prep Facial", price: "₹2,499" },
-        ],
-      },
+    price: "₹399",
+    badge: "Budget Glow",
+    items: [
+      "Deep Cleanup",
+      "Full Arms Honey Waxing",
+      "Threading (Eyebrows)",
+      "Upper Lips",
+    ],
+  },
+  {
+    price: "₹599",
+    badge: "Express Refresh",
+    items: [
+      "Astaberry/Standard Facial",
+      "Full Face Bleach",
+      "Full Arms Honey Waxing",
+      "Threading (Eyebrows)",
+      "Upper Lips",
+    ],
+  },
+  {
+    price: "₹999",
+    badge: "Essential Package",
+    items: [
+      "Astaberry/Standard Facial",
+      "Full Face Bleach",
+      "Full Arms Honey Waxing",
+      "Full Legs Honey Waxing",
+      "Threading (Eyebrows)",
+      "Upper Lips",
+    ],
+  },
+  {
+    price: "₹1,199",
+    badge: "Rica Wax Special",
+    items: [
+      "Standard Glow Facial",
+      "Full Face Bleach",
+      "Full Arms Rica Waxing",
+      "Full Legs Rica Waxing",
+      "Threading (Eyebrows)",
+      "Upper Lips",
+    ],
+  },
+  {
+    price: "₹1,499",
+    badge: "O3+ Face Essential",
+    items: [
+      "Premium O3+ Facial",
+      "Full Arms Honey Waxing",
+      "Full Legs Honey Waxing",
+      "Threading (Eyebrows)",
+      "Upper Lips",
+    ],
+  },
+  {
+    price: "₹1,499",
+    badge: "Pamper Package",
+    items: [
+      "Standard Glow Facial",
+      "Normal Manicure & Pedicure",
+      "Full Arms Honey Waxing",
+      "Full Legs Honey Waxing",
+      "Matrix / Loreal Hair Spa",
+      "Threading & Upper Lips",
+    ],
+  },
+  {
+    price: "₹2,499",
+    badge: "Luxury Glow",
+    items: [
+      "O3+ or Hydra Facial",
+      "Normal Manicure",
+      "Normal Pedicure",
+      "Full Arms Honey Waxing",
+      "Full Legs Honey Waxing",
+      "Threading & Upper Lips",
+    ],
+  },
+  {
+    price: "₹2,499",
+    badge: "Most Popular Combo",
+    items: [
+      "O3+ or Hydra Facial",
+      "Normal Manicure & Pedicure",
+      "Full Arms Rica Waxing",
+      "Full Legs Rica Waxing",
+      "Premium Hair Spa & Threading",
+      "Upper Lips & Threading",
     ],
   },
 ];

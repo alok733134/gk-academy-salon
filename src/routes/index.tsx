@@ -76,7 +76,7 @@ function Hero() {
           className="relative z-10 py-10 lg:py-20"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-cream/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.28em] text-accent">
-            <Sparkles className="h-3.5 w-3.5" /> Ludhiana · Since 2014
+            <Sparkles className="h-3.5 w-3.5 shrink-0 animate-pulse text-accent" /> 50% OFF PROMO LIVE · LUDHIANA
           </span>
           <h1 className="mt-6 text-balance font-display text-5xl leading-[1.02] text-foreground sm:text-6xl lg:text-7xl xl:text-[88px]">
             Beauty as a <span className="font-script text-gradient-gold">craft</span>,<br />
