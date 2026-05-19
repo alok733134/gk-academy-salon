@@ -88,7 +88,7 @@ function AboutPage() {
             className="overflow-hidden rounded-[2rem] border border-border/60 shadow-xl"
           >
             <img
-              src={aboutImg}
+              src="/user.png"
               alt="Gurpreet Kaur — Founder"
               loading="lazy"
               className="h-full w-full object-cover"
