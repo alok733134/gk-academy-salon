@@ -1,7 +1,6 @@
 import nails from "@/assets/service-nails.jpg";
 import makeup from "@/assets/service-makeup.jpg";
 import hair from "@/assets/service-hair.jpg";
-import lashes from "@/assets/service-lashes.jpg";
 import skin from "@/assets/service-skin.jpg";
 import galleryAcademy from "@/assets/gallery-academy.jpg";
 import galleryMehendi from "@/assets/gallery-mehendi.jpg";
@@ -163,9 +162,9 @@ export const services: ServiceCategory[] = [
   },
   {
     slug: "skin",
-    title: "Skin",
+    title: "Skin & Waxing",
     image: skin,
-    blurb: "Experience absolute skin transformation with our curated organic and professional facials.",
+    blurb: "Experience absolute skin transformation with our organic facials and premium Honey/Rica body waxing.",
     items: [
       "O3+ Bridal & Glow Facials",
       "Organic & Astaberry Facials",
@@ -207,25 +206,6 @@ export const services: ServiceCategory[] = [
           { name: "Half Arms (Rica)", price: "₹250" },
           { name: "Half Legs (Rica)", price: "₹250" },
           { name: "Full Body Wax (Rica, without V-Wax)", price: "₹2,000", badge: "Package" },
-        ],
-      },
-    ],
-  },
-  {
-    slug: "lashes",
-    title: "Eyelashes",
-    image: lashes,
-    blurb: "Classic, hybrid and volume lash extensions that last.",
-    items: ["Classic Extensions", "Hybrid Set", "Volume Lashes", "Lash Lift", "Brow Lamination"],
-    menu: [
-      {
-        categoryName: "Lash & Brow Enhancements",
-        items: [
-          { name: "Classic Lash Extensions", price: "₹1,199" },
-          { name: "Hybrid Lash Set", price: "₹1,499" },
-          { name: "Volume Lashes (Full Set)", price: "₹1,999" },
-          { name: "Premium Lash Lift & Tint", price: "₹999" },
-          { name: "Brow Lamination & Styling", price: "₹899" },
         ],
       },
     ],
@@ -420,40 +400,6 @@ export const courses: Course[] = [
       { name: "Advance Course", regularPrice: "₹44,000", salePrice: "₹22,000" },
     ],
   },
-  {
-    title: "Eyelash Extensions",
-    subtitle: "Classic to Volume Masterclass",
-    fee: "₹12,000",
-    duration: "2 weeks",
-    image: lashes,
-    items: [
-      "Lash anatomy & growth cycle",
-      "Classic / Hybrid / Volume extension placement",
-      "Lash lift & tinting techniques",
-      "Hygienic application & safe removal",
-      "Lash styling & client consultation",
-    ],
-    pricingTiers: [
-      { name: "Professional Masterclass", regularPrice: "₹24,000", salePrice: "₹12,000" },
-    ],
-  },
-  {
-    title: "Mehendi Artistry",
-    subtitle: "Bridal & Arabic Design",
-    fee: "₹10,000",
-    duration: "2 weeks",
-    image: galleryMehendi,
-    items: [
-      "Cone holding & cutting control",
-      "Basic flowers, gridlines & motifs",
-      "Arabic & Indo‑Arabic techniques",
-      "Full traditional bridal hands designs",
-      "Elegant foot borders and motifs",
-    ],
-    pricingTiers: [
-      { name: "Bridal Mehendi Course", regularPrice: "₹20,000", salePrice: "₹10,000" },
-    ],
-  },
 ];
 
 export const galleryImages = [
@@ -463,7 +409,6 @@ export const galleryImages = [
   { src: makeup, alt: "Bridal makeup", cat: "Makeup" },
   { src: galleryMehendi, alt: "Mehendi design", cat: "Bridal" },
   { src: galleryNails, alt: "Nail color palette", cat: "Nails" },
-  { src: lashes, alt: "Lash extensions", cat: "Lashes" },
   { src: galleryAcademy, alt: "Inside the academy", cat: "Academy" },
   { src: skin, alt: "Skin therapy", cat: "Skin" },
 ] as const;

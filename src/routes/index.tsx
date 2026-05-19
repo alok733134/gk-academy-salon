@@ -214,8 +214,8 @@ function Services() {
         title="Services that feel like self‑care"
         description="From a quick brow shape to a full bridal trousseau — every appointment is unhurried, hygienic and finished to perfection."
       />
-      <div className="mx-auto mt-14 grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {services.slice(0, 6).map((s, i) => (
+      <div className="mx-auto mt-14 grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((s, i) => (
           <motion.article
             key={s.slug}
             initial={{ opacity: 0, y: 24 }}
